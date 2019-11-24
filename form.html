@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>入力欄の作成
+    </title>
+
+    <style>
+        body {
+            background: lavender;
+            text-align: center;
+            /*display: inline-block;*/
+        }
+
+        input,
+        textarea {
+            font: 1em "メイリオ", sans-serif;
+            width: 250px;
+
+            /*box-sizing: border-box;*/
+
+            /* textboxの空白 */
+            padding: 0.2em 1em;
+            /* ラベルとボックスの距離 */
+            margin: 1em 0;
+            font-weight: bold;
+            /* 文字色 */
+            color: dimgray;
+            background: snow;
+            /* outline */
+            border: solid 4px plum;
+            /* round */
+            border-radius: 15px;
+        }
+
+        /* Only selected text-box */
+        input,
+        textarea:focus {
+            border: solid 5px lightcoral;
+        }
+
+        /* Button */
+        .button {
+            font: 1em "メイリオ", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2> 投稿内容を入力してください </h2>
+    <form action="confirm.php" method="post">
+        <b> ニックネーム: </b> <br>
+        <input type="text" name="nickname" maxlength="20" placeholder="おちょんさん">
+        <br>
+        <b>投稿内容:</b>
+        <br>
+        <textarea name="comment" cols="20" rows="4" placeholder="ご自由に記述して下さい" required="true"></textarea>
+        <br>
+        <br>
+        <div class="button">
+            <button type="reset">リセット</button>
+            <button type="submit">入力内容を確認</button>
+        </div>
+
+    </form>
+</body></html>

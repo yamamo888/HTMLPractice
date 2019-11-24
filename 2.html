@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>リンクの表示
+    </title>
+</head>
+
+<body>
+    <!-- 同じウィンドウで開く -->
+    <a href="https://about.google/intl/ja/">To Google! <br>
+    </a>
+    <!-- 別ウィンドウで開く -->
+    <a href="https://about.google/intl/ja/" target="_blank">To Google! <br>
+    </a>
+    <!-- 下線を消す -->
+    <style>
+        a.nonlinelink {
+            text-decoration: none;
+        }
+
+    </style>
+
+    <a href="https://about.google/intl/ja/" class="nonlinelink">To Google! <br>
+    </a>
+
+    <!-- 好きな色にする -->
+    <style>
+        a.colorlink {
+            color: lightcoral;
+            text-decoration: none;
+        }
+
+        a.colorlink:hover {
+            color: darkblue;
+        }
+
+    </style>
+
+    <a href="https://about.google/intl/ja/" class="colorlink">To Google! <br>
+    </a>
+
+</body>
+
+</html>
