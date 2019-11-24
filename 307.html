@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>クリック時のアラート</title>
+
+    <script>
+        function display() {
+            alert(document.getElementById("name").value);
+        }
+    </script>
+
+</head>
+
+<body>
+    <b> お名前: </b> <br>
+    <input type="text" id="name" maxlength="20" placeholder="おちょんさん"><br>
+    <button onclick=display();>
+        ボタンを押してね！
+    </button>
+
+</body></html>

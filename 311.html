@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>if文による表示2</title>
+
+    <script>
+        function checkage() {
+            var num = 10;
+            if (document.getElementById("number1").value >= num && document.getElementById("number2").value >= num) {
+                alert("OK!");
+            } else {
+                alert("NG!");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <b> 好きな数字1つめ: </b> <br>
+    <input type="text" id="number1"><br><br>
+
+    <b> 好きな数字2つめ: </b> <br>
+    <input type="text" id="number2"><br>
+
+    <button onclick=checkage();>
+        ボタンを押してね！
+    </button>
+
+</body></html>
