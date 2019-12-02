@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>課題2</title>
+    <script>
+        function calcLeapYear() {
+            var year = document.getElementById('year').value;
+            /* not numerical */
+            if (!(year)) {
+                document.getElementById("answer").innerHTML = "数字を入力してください。";
+                /* uruu year */
+            } else if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+                document.getElementById("answer").innerHTML = "うるう年です。";
+                /* not uruu year */
+            } else {
+                document.getElementById("answer").innerHTML = "うるう年ではありません。";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    トラブルシューティング２<br><br>
+    西暦を入力すると、うるう年かどうかを表示します。<br><br>
+    例：2016と入力すると2016年はうるう年なので「うるう年です。」と表示する。<br><br>
+
+    うるう年は4年に1度だが、100年に1度は調整のためうるう年ではない(西暦1900年はうるう年ではない)、<br>
+    ただし、400年に１度はうるう年(2000年はうるう年)と決まっています。<br><br>
+
+    こうなれば正解<br>
+    2016,2012⇒うるう年<br>
+    1900,1800⇒うるう年ではない<br>
+    1600,2000⇒うるう年<br><br>
+
+    西暦<input type="text" id="year"><br>
+    <button onclick=calcLeapYear();>
+        うるう年チェック！
+    </button>
+
+    <div id="answer">ここに答えが出ます</div>
+
+</body>
+
+</html>

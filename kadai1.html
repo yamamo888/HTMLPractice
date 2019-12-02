@@ -1,0 +1,36 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>課題1</title>
+    <script>
+        function checksuji() {
+            /* not numerical */
+            if (!(document.getElementById('suji1').value) || !(document.getElementById('suji2').value)) {
+                document.getElementById("answer").innerHTML = "数字を入力してください。";
+                /* suji1 > suji2 */
+            } else if (document.getElementById('suji1').value > document.getElementById('suji2').value) {
+                document.getElementById("answer").innerHTML = "数字1が大きいです。";
+                /* suji1 == suji2 */
+            } else if (document.getElementById('suji1').value == document.getElementById('suji2').value) {
+                document.getElementById("answer").innerHTML = "同じです!";
+                /* suji1 < suji2 */
+            } else {
+                document.getElementById("answer").innerHTML = "数字2が大きいです。";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    トラブルシューティング１<br>
+    どちらの数値が大きいかを判定します。<br>
+    数字1<input type="text" id="suji1"><br>
+    数字2<input type="text" id="suji2"><br>
+
+    <button onclick=checksuji();>
+        大小チェック！
+    </button>
+
+    <div id="answer">ここに答えが出ます</div>
+
+</body></html> 

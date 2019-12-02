@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>課題4</title>
+    <script>
+        function baisu() {
+
+            /* --- param --- */
+            var answer = "";
+            // start num
+            var sNum = 1
+            // end num
+            var eNum = 500
+            // for 3 multuple
+            var r6Num = 0
+            // for 6 remainder
+            var r3Num = 3
+            // for 3 multuple
+            var m3Num = 3
+            // for 6 multuple
+            var m6Num = 6
+            /* ------------- */
+
+
+            for (var i = sNum; i <= eNum; i++) {
+                if (i % m6Num == r6Num) {
+                    answer = answer + i + ":" + m6Num + "の倍数<br>";
+                } else if (i % m6Num == r3Num) {
+                    answer = answer + i + ":" + m3Num + "の倍数<br>";
+                }
+            }
+            document.getElementById("answer").innerHTML = answer;
+        }
+
+    </script>
+</head>
+
+<body>
+    アルゴリズム課題その２<br><br>
+    １〜５００までの整数で６の倍数のときには「６の倍数」と表示し<br>
+    ３の倍数のときには「３の倍数」と表示してください。<br>
+    ※６の倍数は３の倍数でもありますが、「６の倍数」を優先します。<br><br>
+    <button onclick=baisu();>
+        実行！
+    </button>
+    <div id="answer">ここに答えが出ます</div>
+
+</body>
+
+</html>

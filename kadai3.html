@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>課題3</title>
+    <script>
+        function calcCentury() {
+            var year = parseInt(document.getElementById('year').value);
+
+            //小数点の切り捨てをしたい場合は
+            //Math.floor(切り捨てをしたい少数)と書く。
+            //例： year = Math.floor(year / 10); と書くと
+            //year が 2001の時、20になる。（本当は200.1だが、小数点以下が切り捨て）
+            // 割算する分母
+            dParam = 100
+            /* year -> century */
+            // ex) 1999 -> 20, 2000 -> 20, 2001 -> 21
+            year = Math.ceil(year / dParam);
+            document.getElementById("answer").innerHTML = year;
+        }
+    </script>
+</head>
+
+<body>
+    アルゴリズム課題その１<br>
+    西暦を入力すると、何世紀なのかを表示します<br>
+    正解：1901⇒20世紀、1999⇒20世紀、2000⇒20世紀、2001⇒21世紀<br>
+    西暦<input type="text" id="year"><br>
+    <button onclick=calcCentury();>
+        西暦計算！
+    </button>
+
+    <div id="answer">ここに答えがでます</div>世紀です。
+
+</body></html>
